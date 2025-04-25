@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Eventos</h1>
+    </div>
+  </header>
+  <main>
+    <section>
       <div class="container">
-        <h1>Eventos</h1>
-      </div>
-    </header>
-    <main>
-      <section>
-        <div class="container"> 
-          <div class="card">
-            <h2 class="center">Ingrese su datos de usuario</h2>
-            <form action="#">
-              <input type="text" name="nombre" placeholder="Nombre" />
-              <input type="text" name="apellido" placeholder="Apellido" />
-              <input type="tel" name="telefono" placeholder="Telefono" />
-              <input type="number" name="documento" placeholder="Documento" />
-              <input type="text" name="usuario" placeholder="Usuario" />
-              <input type="password" name="contrasena" placeholder="Contraseña" />
-              <button type="submit" id="btn_validar">Validar</button>
-            </form>
-          </div>
+        <div class="card">
+          <h2 class="center">Ingrese su datos de usuario</h2>
+          <form action="#" novalidate>
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input type="text" name="apellido" placeholder="Apellido" required />
+            <input type="tel" name="telefono" placeholder="Telefono" required />
+            <div class="form_control">
+              <select name="ciudades" id="ciudades">
+                <option>selecionar</option>
+                <option value="1">santander</option>
+                <option value="2">floridablanca</option>
+              </select>
+            </div>
+            <input type="number" name="documento" placeholder="Documento" />
+            <input type="text" name="usuario" placeholder="Usuario" />
+            <input type="password" name="contrasena" placeholder="Contraseña">
+            <div class="form_control">
+              <input type="checkbox" name="" id="politica">
+              <label for="politica"></label>
+            </div>
+
+            <button type="submit" id="btn_validar">Validar</button>
+          </form>
         </div>
-      </section>
-    </main>
-    <script src="app.js"></script>
-  </body>
+      </div>
+    </section>
+    <section>
+      <div class="usuarios"></div>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+
 </html>
