@@ -53,7 +53,7 @@ lista_card.insertAdjacentElement("afterbegin", afterbegin);
 lista_card.insertAdjacentElement("afterend", afterend);
 
 
-let card_dias = document.querySelector(".dias");
+let card_dias = document.querySelector("#dias");
 
 const dias = [
   { id: 1, nombre: "lunes", img: "https://picsum.photos/640/360", parrafo: "Lorem ipsum..." },
