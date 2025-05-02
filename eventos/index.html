@@ -20,9 +20,25 @@
         <div class="card">
           <h2 class="center">Ingrese su datos de usuario</h2>
           <form action="#" novalidate>
-            <input type="text" name="nombre" placeholder="Nombre" required />
-            <input type="text" name="apellido" placeholder="Apellido" required />
-            <input type="tel" name="telefono" placeholder="Telefono" required />
+            <div class="form_control">
+              <input type="text" name="nombre" placeholder="Nombre" required />
+              <input type="text" name="apellido" placeholder="Apellido" required />
+              <input type="tel" name="telefono" placeholder="Telefono" required />
+
+            </div>
+            <div class="checklist">
+              <div class="form_control">
+                <label for="genero">masculino</label>
+                <input type="radio" id="masculino" value="masculino" name="genero" required>
+              </div>
+
+              <div class="form_control">
+                <label for="genero">femenino</label>
+                <input type="radio" id="femenino" value="femenino" name="genero" required>
+              </div>
+
+
+            </div>
             <div class="form_control">
               <select name="ciudades" id="ciudades">
                 <option>selecionar</option>
@@ -37,11 +53,23 @@
               <input type="checkbox" name="" id="politica">
               <label for="politica"></label>
             </div>
-
+            <div class="conten_lenguaje">
+              <label for="lenguajes" class="lenguaje__label">pyton </label>
+              <input type="checkbox" class="lenguaje_input" value="pyton" name="lenguaje" required>
+            </div>
+            <div class="conten_lenguaje">
+              <label for="lenguajes" class="lenguaje__label">javascript </label>
+              <input type="checkbox" class="lenguaje_input" value="javascript" name="lenguaje" required>
+            </div>
+ 
+            <div class="conten_lenguaje">
+              <label for="lenguajes" class="lenguaje__label">C# </label>
+              <input type="checkbox" class="lenguaje_input" value="c#" name="lenguaje" required>
+            </div>
             <button type="submit" id="btn_validar">Validar</button>
-          </form>
+          </form> 
         </div>
-      </div>
+      </div> 
     </section>
     <section>
       <div class="usuarios"></div>

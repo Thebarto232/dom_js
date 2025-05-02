@@ -10,7 +10,11 @@ const usuario = document.querySelector('[name=usuario]');
 const contrasena = document.querySelector('[name=contrasena]');
 const boton = document.querySelector(`#btn_validar`);
 const politica = document.querySelector(`#politica`)
-const usuarios = document.querySelector(`#usuarios`)
+const checkeo = document.q
+
+
+
+
 
 
 
@@ -74,6 +78,23 @@ const validar = (event) => {
     contrasena.focus();
   }
 
+  // const leer = masculino.value;
+  // if (leer.value === "") {
+  //   leer += "genero";
+  //   const spam = document.createElement(`span`);
+  //   leer.classList.add("color-rojo");
+  //   spam.textContent = "el elemento esta marcado";
+  //   leer.insertAdjacentElement(`afterend`, spam);
+  //   leer.focus();
+  // }
+  // else {
+  //   const spam = document.createElement(`span`);
+  //   leer.classList.add("color-rojo");
+  //   spam.textContent = "el elemento esta marcado";
+  //   leer.insertAdjacentElement(`afterend`, spam);
+  //   leer.focus();
+  // }
+
   if (mensaje !== "ingrese correctamente: ") {
     alert(mensaje);
   }
@@ -83,6 +104,8 @@ const validar = (event) => {
 
 const limpiar = (event) => {
   if (event.target !== "") {
+
+
     event.target.classList.remove(`color-rojo`)
     if (event.target.nextElementSibling) {
       event.target.nextElementSibling
@@ -120,10 +143,22 @@ const telef = (event) => {
     event.preventDefault();
   }
 };
+const valido = (event) => {
+  let data = validar(event);
+
+  console.log(data);
+
+}
+
+
+// }
 
 //  eventos
-formulario.addEventListener('submit', validacion);
+formulario.addEventListener('submit', validacion, valido);
 nombre.addEventListener('keydown', letras, limpiar);
 apellido.addEventListener('keydown', letras, limpiar);
 telefono.addEventListener('keydown', telef, limpiar);
+
+
+
 

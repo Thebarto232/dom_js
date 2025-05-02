@@ -176,3 +176,26 @@ button:hover {
 .color-rojo {
   border:  red 2px solid;
 }
+.checklist{
+  
+display: flex;
+justify-content: center;
+flex-direction: row;
+justify-content: space-around;
+}
+.conten_lenguaje{
+ display: flex;
+  justify-content: start;
+  margin: 5px 30px;
+  align-items: center;
+  gap: 30px;
+}
+
+.lenguaje__label {
+  width: 80px;
+}
+
+.lenguaje_input{
+  width: auto;
+  margin: 5%;
+}
